@@ -1,16 +1,21 @@
 #include "ScavTrap.hpp"
+#include "FlagTrap.hpp"
 
 int main(void)
 {
  ScavTrap A("A");
- ScavTrap B("B");
+ FlagTrap B("B");
  A.guardGate();
- A.attack("B");
- B.takeDamage(20);
- A.attack("B");
+ B.highFiveGuys();
  A.attack("B");
  A.attack("B");
  A.attack("B");
- B.takeDamage(80);
+ A.attack("B");
+ A.attack("B");
+ B.takeDamage(100);
+ A.attack("B");
+ A.attack("B");
+ B.takeDamage(40);
+ B.beRepaired(100);
  return (0);
 }
