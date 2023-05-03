@@ -14,8 +14,7 @@ int main(void)
  A.attack("B");
  B.takeDamage(100);
  A.attack("B");
- A.attack("B");
- B.takeDamage(40);
+ B.takeDamage(20);
  B.beRepaired(100);
  return (0);
 }
