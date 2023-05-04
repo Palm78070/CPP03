@@ -13,10 +13,13 @@ ClapTrap::ClapTrap(ClapTrap const &src)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &x)
 {
-  this->_name = x._name;
-  this->_HitPts = x._HitPts;
-  this->_EnergyPts = x._EnergyPts;
-  this->_AttackDmg = x._AttackDmg;
+  if (this != &x)
+  {
+    this->_name = x._name;
+    this->_HitPts = x._HitPts;
+    this->_EnergyPts = x._EnergyPts;
+    this->_AttackDmg = x._AttackDmg;
+  }
   std::cout << "ClapTrap " << this->_name << " is copied with copy assignment operator" << std::endl;
   return (*this);
 }
