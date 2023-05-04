@@ -2,12 +2,13 @@ NAME := a.out
 
 CC := c++
 
-CFLAGS := -Wall -Werror -Wextra -std=c++98 -g
+CFLAGS := -Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98 -g
 
 SRCS := main.cpp \
 	ClapTrap.cpp \
 	ScavTrap.cpp \
 	FragTrap.cpp \
+	DiamondTrap.cpp \
 
 OBJS := $(SRCS:.cpp=.o)
 

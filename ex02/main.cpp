@@ -1,10 +1,10 @@
 #include "ScavTrap.hpp"
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
  ScavTrap A("A");
- FlagTrap B("B");
+ FragTrap B("B");
  A.guardGate();
  B.highFiveGuys();
  A.attack("B");

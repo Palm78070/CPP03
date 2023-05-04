@@ -11,7 +11,7 @@ ClapTrap::ClapTrap(std::string const &name) : _Name(name)
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
   *this = src;
-  std::cout << "ClapTrap " << this->_Name << "is copied with copy constructor" << std::endl;
+  std::cout << "ClapTrap " << this->_Name << " is copied with copy constructor" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &x)
@@ -20,7 +20,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &x)
   this->_HitPts = x._HitPts;
   this->_EnergyPts = x._EnergyPts;
   this->_AttackDmg = x._AttackDmg;
-  std::cout << "ClapTrap " << this->_Name << "is copied with copy assignment" << std::endl;
+  std::cout << "ClapTrap " << this->_Name << " is copied with copy assignment" << std::endl;
   return (*this);
 }
 
@@ -52,7 +52,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
   if (this->_EnergyPts <= 0)
   {
-    std::cout << "ClapTrap " << this->_Name << "cannot repaired: has no energy point left" << std::endl;
+    std::cout << "ClapTrap " << this->_Name << " cannot repaired: has no energy point left" << std::endl;
     return;
   }
   std::cout << "ClapTrap " << this->_Name << " is repaired, get " << amount << " hit points back" << std::endl;
